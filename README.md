@@ -8,6 +8,8 @@ A Python library that binds skill names and aliases to the exact `SKILL.md` byte
 
 [한국어](README.ko.md) · Python 3.9+
 
+[![pypi](https://img.shields.io/pypi/v/skill-exposure-manifest?label=pypi)](https://pypi.org/project/skill-exposure-manifest/)
+[![tests](https://github.com/elfenomenokim/skill-exposure-manifest/actions/workflows/tests.yml/badge.svg)](https://github.com/elfenomenokim/skill-exposure-manifest/actions/workflows/tests.yml)
 [![license](https://img.shields.io/github/license/elfenomenokim/skill-exposure-manifest)](LICENSE)
 
 [Install](#install) · [Quick start](#quick-start) · [Why](#why) · [Reference](#reference)

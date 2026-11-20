@@ -10,6 +10,8 @@
 
 Python 3.9+
 
+[![pypi](https://img.shields.io/pypi/v/skill-exposure-manifest?label=pypi)](https://pypi.org/project/skill-exposure-manifest/)
+[![tests](https://github.com/elfenomenokim/skill-exposure-manifest/actions/workflows/tests.yml/badge.svg)](https://github.com/elfenomenokim/skill-exposure-manifest/actions/workflows/tests.yml)
 [![license](https://img.shields.io/github/license/elfenomenokim/skill-exposure-manifest)](LICENSE)
 
 [설치](#설치) · [빠른 시작](#빠른-시작) · [왜 필요한가](#왜-필요한가) · [레퍼런스](#레퍼런스)
