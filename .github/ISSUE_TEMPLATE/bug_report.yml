@@ -1,0 +1,43 @@
+name: Bug report
+description: A resolution returned the wrong skill, or a valid one was refused.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: For a security problem, do not use this form. Use the Security tab advisory instead.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Output of `pip show skill-exposure-manifest`, or the commit you ran.
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      placeholder: macOS 26 arm64, Python 3.12.8
+    validations:
+      required: true
+  - type: textarea
+    id: tree
+    attributes:
+      label: The skills tree and policy entry
+      description: The directory layout, the policy registration, and the query. Two or three files is enough.
+      render: json
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual
+      description: The entry you expected and the entry or error you got.
+    validations:
+      required: true
+  - type: textarea
+    id: traceback
+    attributes:
+      label: Traceback
+      render: shell
+    validations:
+      required: false

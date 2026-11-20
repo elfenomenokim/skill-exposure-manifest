@@ -1,0 +1,13 @@
+{
+  "schema": "skill-exposure-manifest-bench/1",
+  "date": "2026-11-19",
+  "host": "macOS arm64 (Apple M5 Pro)",
+  "python": "3.12.8",
+  "method": "9 runs, perf_counter, warm page cache; min and median reported because the host is shared",
+  "registrations": 64,
+  "canonical_policy_manifest_ms_min": 96.9,
+  "canonical_policy_manifest_ms_median": 119.1,
+  "resolve_canonical_skill_ms_min": 82.1,
+  "resolve_canonical_skill_ms_median": 119.4,
+  "sources_read_per_resolve": 64
+}

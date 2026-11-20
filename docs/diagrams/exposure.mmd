@@ -1,0 +1,19 @@
+flowchart LR
+  subgraph without["Without a manifest"]
+    direction TB
+    a1["Agent asks for<br/><b>atlas-flow</b>"] --> a2["Folder was renamed<br/>or swapped for a link"]
+    a2 --> a3["Wrong or missing SKILL.md<br/>loaded <b>silently</b>"]
+  end
+  subgraph with["With skill-exposure-manifest"]
+    direction TB
+    b1["Agent asks for<br/><b>atlas-flow</b><br/>or an alias"] --> b2["Manifest entry<br/>path + SHA-256"]
+    b2 --> b3{"Re-read the file:<br/>same bytes?"}
+    b3 -- yes --> b4["Load the exact<br/>SKILL.md"]
+    b3 -- "no / renamed / link" --> b5["Refuse with<br/>the reason"]
+  end
+  without ~~~ with
+  classDef bad fill:#fee2e2,stroke:#dc2626,color:#7f1d1d
+  classDef good fill:#dcfce7,stroke:#16a34a,color:#14532d
+  class a3 bad
+  class b4 good
+  class b5 bad

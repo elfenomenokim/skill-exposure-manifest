@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skill-exposure-manifest"
+version = "0.2.0"
+description = "A Python library that binds skill names and aliases to their SKILL.md source bytes, so a runtime resolves only exact, verified names."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "El Fenomeno" }]
+keywords = ["agents", "skills", "manifest", "sha256", "prompt", "runtime", "policy"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: System :: Systems Administration",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[project.urls]
+Homepage = "https://github.com/elfenomenokim/skill-exposure-manifest"
+Repository = "https://github.com/elfenomenokim/skill-exposure-manifest"
+Issues = "https://github.com/elfenomenokim/skill-exposure-manifest/issues"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

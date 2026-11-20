@@ -1,0 +1,35 @@
+name: Feature request
+description: Propose a change to what the manifest binds or how a name resolves.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What a caller cannot express today, with the layout or policy that needs it.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you propose
+      description: The argument, field, or behaviour you want. Name the caller that needs it.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What you tried instead
+      description: A separate wrapper, a naming convention, or nothing.
+    validations:
+      required: false
+  - type: dropdown
+    id: compatible
+    attributes:
+      label: Does this keep existing manifests readable?
+      options:
+        - "Yes"
+        - "No, it changes the schema"
+        - "I am not sure"
+    validations:
+      required: true

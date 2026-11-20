@@ -1,0 +1,19 @@
+flowchart LR
+  subgraph without["목록이 없을 때"]
+    direction TB
+    a1["에이전트가<br/><b>atlas-flow</b>를 찾음"] --> a2["폴더 이름이 바뀜<br/>또는 링크로<br/>바꿔치기됨"]
+    a2 --> a3["엉뚱하거나 없는 SKILL.md를<br/><b>조용히</b> 읽음"]
+  end
+  subgraph with["skill-exposure-manifest가 있을 때"]
+    direction TB
+    b1["에이전트가<br/><b>atlas-flow</b> 또는<br/>별칭을 찾음"] --> b2["목록 항목<br/>경로 + SHA-256"]
+    b2 --> b3{"파일을 다시 읽어<br/>내용이 같은가?"}
+    b3 -- 같음 --> b4["정확히 그<br/>SKILL.md를 읽음"]
+    b3 -- "다름 / 이름 바뀜 / 링크" --> b5["이유를 대며<br/>거부"]
+  end
+  without ~~~ with
+  classDef bad fill:#fee2e2,stroke:#dc2626,color:#7f1d1d
+  classDef good fill:#dcfce7,stroke:#16a34a,color:#14532d
+  class a3 bad
+  class b4 good
+  class b5 bad
